@@ -1,0 +1,43 @@
+function internosignup() {
+    const User_name = document.getElementById("username").value;
+    if (!(User_name.length > 8 && User_name.length < 15)) {
+        alert("Username cannot be less than 8 or more than 15");
+        return false;
+    }
+    const Email = document.getElementById("email").value;
+    if (!((Email.includes("@") && Email.includes(".in")) || (Email.includes("@") && Email.includes(".com")) || (Email.includes("@") && Email.includes(".edu")))) {
+        alert("Please check your mail and try again");
+        return false;
+    }
+    const Phone_No = document.getElementById("telephone").value;
+    if (Phone_No.length != 10) {
+        alert("Phone no cannot be more than 10 digits long");
+        return false;
+    }
+    const Age = document.getElementById("age").value;
+    if ((Age<10 && Age>40)) {
+        alert("not eligible");
+        return false;
+    }
+    const Pass_word = document.getElementById("password").value;
+    const Confirm_Pass_word = document.getElementById("confirm_password").value;
+    if (Pass_word == Confirm_Pass_word) {
+      alert("Passwords match");
+    }
+    else {
+      alert("dont match");
+    }
+  }
+
+
+
+function internologin() {
+    const User_name = document.getElementById("username").value;
+    const Pass_word = document.getElementById("password").value;
+    if (User_name == "yaswanth" && Pass_word == "yash") {
+        alert("Login successfull");
+    }
+    else {
+        alert("Invalid username or password!please try again");
+    }
+}
